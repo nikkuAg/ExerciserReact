@@ -25,9 +25,9 @@ const MainToolbar = (props) => {
                 id="network-button"
                 title={networkTitle} />
             {!props.inEditMode &&
-            !props.location.pathname.startsWith('/edit') &&
-            !props.location.pathname.startsWith('/play') &&
-            !props.location.pathname.startsWith('/scores') &&
+            !props.router.location.pathname.startsWith('/edit') &&
+            !props.router.location.pathname.startsWith('/play') &&
+            !props.router.location.pathname.startsWith('/scores') &&
                 <button
                     className="toolbutton"
                     id="editor-button"
@@ -41,17 +41,17 @@ const MainToolbar = (props) => {
                     title={playButton}
                     onClick={props.exitEditMode} />
             }
-            {props.location.pathname !== '/' &&
+            {props.router.location.pathname !== '/' &&
                 <button
                     className="toolbutton"
                     id="home-button"
                     title={homeTitle}
                     onClick={props.directToHome} />
             }
-            {!props.location.pathname.startsWith('/new') &&
-            !props.location.pathname.startsWith('/edit') &&
-            !props.location.pathname.startsWith('/play') &&
-            !props.location.pathname.startsWith('/scores') &&
+            {!props.router.location.pathname.startsWith('/new') &&
+            !props.router.location.pathname.startsWith('/edit') &&
+            !props.router.location.pathname.startsWith('/play') &&
+            !props.router.location.pathname.startsWith('/scores') &&
             props.inEditMode &&
             <button
                 className="toolbutton"

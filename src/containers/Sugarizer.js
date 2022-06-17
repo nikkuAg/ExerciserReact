@@ -37,7 +37,6 @@ class Sugarizer extends Component {
 
 	constructor(props) {
 		super(props);
-
 		addLocaleData([...locale_en, ...locale_fr, ...locale_es]);
 
 		this.language = navigator.language.split(/[-_]/)[0];

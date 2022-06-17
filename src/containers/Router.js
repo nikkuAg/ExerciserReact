@@ -1,7 +1,7 @@
 import React from "react";
-import { Switch, Route, withRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import useDimensions from "react-use-dimensions";
-
+import {withRouter} from "../withRouter"
 import ExerciseList from "./ExerciseList";
 import Scores from "./Scores/Scores"
 
@@ -35,47 +35,47 @@ const Main = (props) => {
 		zoom = `${((boardSize/containerSize.height) + paddingPercent/100) * 100}%`;
 	}
 	const { onUpdate, onSharedResult, inEditMode, inFullscreenMode } = props;
-
+	console.log(props)
 	return (
 		<div className="main-container" ref={ref} style={{zoom: zoom, padding: (props.inFullscreenMode && "0px")}}>
-			<Switch>
-				<Route exact path="/" render={props => <ExerciseList onUpdate={onUpdate} inEditMode={inEditMode} inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/new" render={props => <NewExerciseTemplate inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/scores" render={props => <Scores onSharedResult={onSharedResult} inFullscreenMode={inFullscreenMode} {...props} />} />
+			<Routes>
+				<Route exact path="/" element={ <ExerciseList onUpdate={onUpdate} inEditMode={inEditMode} inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/new" element={<NewExerciseTemplate inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/scores" element={<Scores onSharedResult={onSharedResult} inFullscreenMode={inFullscreenMode} {...props} />} />
 
 				{/* MCQ */}
-				<Route exact path="/new/mcq" render={props => <MCQForm inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/edit/mcq" render={props => <MCQForm inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/play/mcq" render={props => <MCQPlay inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/new/mcq" element={<MCQForm inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/edit/mcq" element={<MCQForm inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/play/mcq" element={<MCQPlay inFullscreenMode={inFullscreenMode} {...props} />} />
 
 				{/* CLOZE */}
-				<Route exact path="/new/cloze" render={props => <CLOZEForm inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/edit/cloze" render={props => <CLOZEForm inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/play/cloze" render={props => <CLOZEPlay inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/new/cloze" element={<CLOZEForm inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/edit/cloze" element={<CLOZEForm inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/play/cloze" element={<CLOZEPlay inFullscreenMode={inFullscreenMode} {...props} />} />
 
 				{/* REORDER */}
-				<Route exact path="/new/reorder" render={props => <REORDERForm inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/edit/reorder" render={props => <REORDERForm inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/play/reorder" render={props => <REORDERPlay inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/new/reorder" element={<REORDERForm inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/edit/reorder" element={<REORDERForm inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/play/reorder" element={<REORDERPlay inFullscreenMode={inFullscreenMode} {...props} />} />
 
 				{/* // GROUP ASSIGNMENT */}
-				<Route exact path="/new/group" render={props => <GroupAssignmentForm inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/edit/group" render={props => <GroupAssignmentForm inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/play/group" render={props => <GroupAssignmentPlayer inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/new/group" element={<GroupAssignmentForm inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/edit/group" element={<GroupAssignmentForm inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/play/group" element={<GroupAssignmentPlayer inFullscreenMode={inFullscreenMode} {...props} />} />
 
 				{/* // FREE TEXT INPUT */}
-				<Route exact path="/new/freeText" render={props => <FreeTextInputForm inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/edit/freeText" render={props => <FreeTextInputForm inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/play/freeText" render={props => <FreeTextInputPlayer inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/new/freeText" element={<FreeTextInputForm inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/edit/freeText" element={<FreeTextInputForm inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/play/freeText" element={<FreeTextInputPlayer inFullscreenMode={inFullscreenMode} {...props} />} />
 
 				{/* MATCHING_PAIR */}
-				<Route exact path="/new/match" render={props => <MATCHINGPAIRForm inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/edit/match" render={props => <MATCHINGPAIRForm inFullscreenMode={inFullscreenMode} {...props} />} />
-				<Route exact path="/play/match" render={props => <MATCHINGPAIRPlayer inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/new/match" element={<MATCHINGPAIRForm inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/edit/match" element={<MATCHINGPAIRForm inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/play/match" element={<MATCHINGPAIRPlayer inFullscreenMode={inFullscreenMode} {...props} />} />
 
-				<Route exact path="/presence/scores" render={props => <PresenceScores inFullscreenMode={inFullscreenMode} {...props} />} />
+				<Route exact path="/presence/scores" element={<PresenceScores inFullscreenMode={inFullscreenMode} {...props} />} />
 
-			</Switch>
+			</Routes>
 		</div>
 	)
 };

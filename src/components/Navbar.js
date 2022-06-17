@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { withRouter } from "../withRouter";
 import '../css/Navbar.css'
 import { injectIntl } from 'react-intl';
 import { UNFULLSCREEN } from "../containers/translation";
@@ -17,12 +17,12 @@ class Navbar extends Component {
 
 	// redirect to new exercise template
 	directToNew = () => {
-		this.props.history.push('/new');
+		this.props.router.navigate('/new');
 	};
 
 	// redirect to home screen
 	directToHome = () => {
-		this.props.history.push('/');
+		this.props.router.navigate('/');
 	};
 
 	enterEditMode = () => {
@@ -31,7 +31,7 @@ class Navbar extends Component {
 
 	exitEditMode = () => {
 		this.props.toggleEditMode(false);
-		this.props.history.push('/');
+		this.props.router.navigate('/');
 	}
 
 	startTutorial = () => {

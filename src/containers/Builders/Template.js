@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from "react-router-dom";
+import { withRouter } from "../../withRouter";
 import { connect } from "react-redux";
 import "../../css/NewExerciseTemplate.css"
 import { FormattedMessage } from 'react-intl';
@@ -20,28 +20,28 @@ import {
 } from "../translation";
 
 const mcqSelected = (history) => {
-	history.push('/new/mcq')
+	history.navigate('/new/mcq')
 };
 
 
 const clozeSelected = (history) => {
-	history.push('/new/cloze')
+	history.navigate('/new/cloze')
 };
 
 const reorderSelected = (history) => {
-	history.push('/new/reorder')
+	history.navigate('/new/reorder')
 };
 
 const groupAssignmentSelected = (history) => {
-	history.push('/new/group');
+	history.navigate('/new/group');
 };
 
 const freeTextSelected = (history) => {
-	history.push('/new/freeText');
+	history.navigate('/new/freeText');
 }
 
 const matchingPairSelected = (history) => {
-	history.push('/new/match')
+	history.navigate('/new/match')
 };
 
 function Template(props) {
@@ -54,7 +54,7 @@ function Template(props) {
 			<div className="col-md-10 mx-auto">
 				<div className="row justify-content-center align-self-center">
 					<div className="col-sm-4">
-						<div className="card grow" onClick={mcqSelected.bind(null, props.history)}>
+						<div className="card grow" onClick={() => mcqSelected(props.router)}>
 							<div className="card-img-container">
 								<div className="card-img-top background-mcq" style={props.inFullscreenMode? fullScreenStyles : {}}/>
 							</div>
@@ -63,14 +63,14 @@ function Template(props) {
 								<p className="card-text">
 									<FormattedMessage id={MCQ_TEMPLATE_STRING} />
 								</p>
-								<button className="button-choose" onClick={mcqSelected.bind(null, props.history)}>
+								<button className="button-choose" onClick={() => mcqSelected(props.router)}>
 									<FormattedMessage id={CHOOSE} />
 								</button>
 							</div>
 						</div>
 					</div>
 					<div className="col-sm-4">
-						<div className="card grow" onClick={clozeSelected.bind(null, props.history)}>
+						<div className="card grow" onClick={() => clozeSelected(props.router)}>
 							<div className="card-img-container">
 								<div className="card-img-top background-cloze" style={props.inFullscreenMode? fullScreenStyles : {}}/>
 							</div>
@@ -79,14 +79,14 @@ function Template(props) {
 								<p className="card-text">
 									<FormattedMessage id={CLOZE_TEMPLATE_STRING} />
 								</p>
-								<button className="button-choose" onClick={clozeSelected.bind(null, props.history)}>
+								<button className="button-choose" onClick={() => clozeSelected(props.router)}>
 									<FormattedMessage id={CHOOSE} />
 								</button>
 							</div>
 						</div>
 					</div>
 					<div className="col-sm-4">
-						<div className="card grow" onClick={reorderSelected.bind(null, props.history)}>
+						<div className="card grow" onClick={() => reorderSelected(props.router)}>
 							<div className="card-img-container">
 								<div className="card-img-top background-reorder" style={props.inFullscreenMode? fullScreenStyles : {}}/>
 							</div>
@@ -95,14 +95,14 @@ function Template(props) {
 								<p className="card-text">
 									<FormattedMessage id={REORDER_TEMPLATE_STRING} />
 								</p>
-								<button className="button-choose" onClick={reorderSelected.bind(null, props.history)}>
+								<button className="button-choose" onClick={() => reorderSelected(props.router)}>
 									<FormattedMessage id={CHOOSE} />
 								</button>
 							</div>
 						</div>
 					</div>
 					<div className="col-sm-4">
-						<div className="card grow" onClick={groupAssignmentSelected.bind(null, props.history)}>
+						<div className="card grow" onClick={() => groupAssignmentSelected(props.router)}>
 							<div className="card-img-container">
 								<div className="card-img-top background-group" style={props.inFullscreenMode? fullScreenStyles : {}}/>
 							</div>
@@ -111,14 +111,14 @@ function Template(props) {
 								<p className="card-text">
 									<FormattedMessage id={GROUP_ASSIGNMENT_TEMPLATE_STRING} />
 								</p>
-								<button className="button-choose" onClick={groupAssignmentSelected.bind(null, props.history)}>
+								<button className="button-choose" onClick={() => groupAssignmentSelected(props.router)}>
 									<FormattedMessage id={CHOOSE} />
 								</button>
 							</div>
 						</div>
 					</div>
 					<div className="col-sm-4">
-						<div className="card grow" onClick={freeTextSelected.bind(null, props.history)}>
+						<div className="card grow" onClick={() => freeTextSelected(props.router)}>
 							<div className="card-img-container">
 								<div className="card-img-top background-freetext" style={props.inFullscreenMode? fullScreenStyles : {}}/>
 							</div>
@@ -127,14 +127,14 @@ function Template(props) {
 								<p className="card-text">
 									<FormattedMessage id={FREE_TEXT_INPUT_TEMPLATE_STRING} />
 								</p>
-								<button className="button-choose" onClick={freeTextSelected.bind(null, props.history)}>
+								<button className="button-choose" onClick={() => freeTextSelected(props.router)}>
 									<FormattedMessage id={CHOOSE} />
 								</button>
 							</div>
 						</div>
 					</div>
 					<div className="col-sm-4">
-						<div className="card mb-3 grow" onClick={matchingPairSelected.bind(null, props.history)}>
+						<div className="card mb-3 grow" onClick={() => matchingPairSelected(props.router)}>
 							<div className="card-img-container">
 								<div className="card-img-top background-match" style={props.inFullscreenMode? fullScreenStyles : {}}/>
 							</div>
@@ -143,7 +143,7 @@ function Template(props) {
 								<p className="card-text">
 									<FormattedMessage id={MATCHING_PAIR_STRING} />
 								</p>
-								<button className="button-choose" onClick={matchingPairSelected.bind(null, props.history)}>
+								<button className="button-choose" onClick={() => matchingPairSelected(props.router)}>
 									<FormattedMessage id={CHOOSE} />
 								</button>
 							</div>

@@ -2,23 +2,23 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlnsDc="http://purl.org/dc/elements/1.1/"
+   xmlnsCc="http://creativecommons.org/ns#"
+   xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlnsSvg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlnsInkscape="http://www.inkscape.org/namespaces/inkscape"
    width="100mm"
    height="100mm"
    viewBox="0 0 100 100"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="freetext_input_image.svg">
+   inkscapeVersion="0.92.3 (2405546, 2018-03-11)"
+   sodipodiDocname="freetext_input_image.svg">
   <defs
      id="defs2">
-    <inkscape:path-effect
+    <inkscapePath-effect
        effect="bspline"
        id="path-effect4779"
        is_visible="true"
@@ -35,7 +35,7 @@
       <desc
          id="desc7207">Combine two or more sets of items into one set. (ISO)</desc>
       <path
-         inkscape:connector-curvature="0"
+         inkscapeConnector-curvature="0"
          d="M 9.2604167,9.2604167 H 30.427083 L 19.84375,27.78125 Z"
          style="stroke-width:0.52916664"
          id="path7209" />
@@ -47,51 +47,51 @@
       <desc
          id="desc7251">Removal of one or more specific sets of times from a set. (ISO)</desc>
       <path
-         inkscape:connector-curvature="0"
+         inkscapeConnector-curvature="0"
          d="M 9.2604167,30.427083 19.84375,11.90625 30.427083,30.427083 Z"
          style="stroke-width:0.52916664"
          id="path7253" />
     </symbol>
   </defs>
-  <sodipodi:namedview
+  <sodipodiNamedview
      id="base"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="2.0000001"
-     inkscape:cx="184.49397"
-     inkscape:cy="261.20464"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscapePageopacity="0.0"
+     inkscapePageshadow="2"
+     inkscapeZoom="2.0000001"
+     inkscapeCx="184.49397"
+     inkscapeCy="261.20464"
+     inkscapeDocument-units="mm"
+     inkscapeCurrent-layer="layer1"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1413"
-     inkscape:window-height="751"
-     inkscape:window-x="86"
-     inkscape:window-y="119"
-     inkscape:window-maximized="0"
-     inkscape:snap-grids="false"
-     inkscape:snap-to-guides="false" />
+     inkscapeWindow-width="1413"
+     inkscapeWindow-height="751"
+     inkscapeWindow-x="86"
+     inkscapeWindow-y="119"
+     inkscapeWindow-maximized="0"
+     inkscapeSnap-grids="false"
+     inkscapeSnap-to-guides="false" />
   <metadata
      id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
+    <rdfRDF>
+      <ccWork
+         rdfAbout="">
+        <dcFormat>image/svg+xml</dcFormat>
+        <dcType
+           rdfResource="http://purl.org/dc/dcmitype/StillImage" />
+        <dcTitle></dcTitle>
+      </ccWork>
+    </rdfRDF>
   </metadata>
   <g
-     inkscape:label="Calque 1"
-     inkscape:groupmode="layer"
+     inkscapeLabel="Calque 1"
+     inkscapeGroupmode="layer"
      id="layer1"
      transform="translate(-43.845234,-67.946426)">
     <rect
@@ -135,8 +135,8 @@
          id="rect3715-3"
          style="fill:#ffffff;stroke:#333333;stroke-width:0.13433683" />
       <rect
-         inkscape:transform-center-y="0.97402654"
-         inkscape:transform-center-x="-0.16370258"
+         inkscapeTransform-center-y="0.97402654"
+         inkscapeTransform-center-x="-0.16370258"
          y="94.776665"
          x="57.520245"
          height="2.4135418"
@@ -183,8 +183,8 @@
          height="2.4135418"
          x="83.753082"
          y="95.041245"
-         inkscape:transform-center-x="-0.16370258"
-         inkscape:transform-center-y="0.97402654" />
+         inkscapeTransform-center-x="-0.16370258"
+         inkscapeTransform-center-y="0.97402654" />
     </g>
     <g
        id="g10017">
@@ -219,8 +219,8 @@
          id="rect9987"
          style="fill:#ffffff;stroke:#333333;stroke-width:0.13433683" />
       <rect
-         inkscape:transform-center-y="0.97402654"
-         inkscape:transform-center-x="-0.16370258"
+         inkscapeTransform-center-y="0.97402654"
+         inkscapeTransform-center-x="-0.16370258"
          y="95.041245"
          x="114.08695"
          height="2.4135418"
@@ -262,8 +262,8 @@
          id="rect10025"
          style="fill:#ffffff;stroke:#333333;stroke-width:0.13433683" />
       <rect
-         inkscape:transform-center-y="0.97402654"
-         inkscape:transform-center-x="-0.16370258"
+         inkscapeTransform-center-y="0.97402654"
+         inkscapeTransform-center-x="-0.16370258"
          y="95.041245"
          x="83.753082"
          height="2.4135418"
@@ -311,8 +311,8 @@
          height="2.4135418"
          x="57.520245"
          y="94.776665"
-         inkscape:transform-center-x="-0.16370258"
-         inkscape:transform-center-y="0.97402654" />
+         inkscapeTransform-center-x="-0.16370258"
+         inkscapeTransform-center-y="0.97402654" />
     </g>
   </g>
 </svg>

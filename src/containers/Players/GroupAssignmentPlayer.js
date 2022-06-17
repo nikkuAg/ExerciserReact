@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter } from "../../withRouter";
 import { connect } from "react-redux";
 import { addScoreTime } from '../../store/actions/exercises';
 import "../../css/GroupAssignmentPlayer.css"
@@ -47,8 +47,8 @@ class GroupAssignmentPlayer extends Component {
 
 	// load the exercise from props
 	componentDidMount() {
-		if (this.props.location.state) {
-			const { id, title, questions, scores, times, groups, userLanguage } = this.props.location.state.exercise;
+		if (this.props.router.location.state) {
+			const { id, title, questions, scores, times, groups, userLanguage } = this.props.router.location.state.exercise;
 
 			let updatedQuestions = questions.map((ques) => {
 				return {
@@ -66,7 +66,7 @@ class GroupAssignmentPlayer extends Component {
 			if (questions.length === 1) finish = true;
 
 			let goBackToEdit = false;
-			if (this.props.location.state.edit) goBackToEdit = true;
+			if (this.props.router.location.state.edit) goBackToEdit = true;
 
 
 			this.setState({
@@ -197,7 +197,7 @@ class GroupAssignmentPlayer extends Component {
 	// redirect to scores screen/ edit screen
 	finishExercise = () => {
 		const { scores, currentScore, id, currentTime, times, noOfQuestions, goBackToEdit, questions, userans } = this.state;
-		let exercise = this.props.location.state.exercise;
+		let exercise = this.props.router.location.state.exercise;
 
 		let updatedUserAnswers = questions.map((question, index) => {
 			return {
@@ -208,12 +208,12 @@ class GroupAssignmentPlayer extends Component {
 		})
 
 		if (goBackToEdit)
-			this.props.history.push('/edit/group', { exercise: exercise });
+			this.props.router.navigate('/edit/group', {state:{ exercise: exercise }});
 		else {
 			scores.push(currentScore);
 			times.push(currentTime);
 			this.props.addScoreTime(id, currentScore, currentTime);
-			this.props.history.push('/scores', {
+			this.props.router.navigate('/scores', {state:{
 				scores: scores,
 				userScore: currentScore,
 				times: times,
@@ -222,7 +222,7 @@ class GroupAssignmentPlayer extends Component {
 				exercise: exercise,
 				userAnswers: updatedUserAnswers,
 				type: "GROUP_ASSIGNMENT"
-			});
+			}});
 		}
 	};
 

@@ -2,24 +2,24 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlnsDc="http://purl.org/dc/elements/1.1/"
+   xmlnsCc="http://creativecommons.org/ns#"
+   xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlnsSvg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlnsXlink="http://www.w3.org/1999/xlink"
+   xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlnsInkscape="http://www.inkscape.org/namespaces/inkscape"
    width="100mm"
    height="100mm"
    viewBox="0 0 100 100"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="list_reorder_image.svg">
+   inkscapeVersion="0.92.3 (2405546, 2018-03-11)"
+   sodipodiDocname="list_reorder_image.svg">
   <defs
      id="defs2">
-    <inkscape:path-effect
+    <inkscapePath-effect
        effect="bspline"
        id="path-effect4779"
        is_visible="true"
@@ -36,7 +36,7 @@
       <desc
          id="desc7207">Combine two or more sets of items into one set. (ISO)</desc>
       <path
-         inkscape:connector-curvature="0"
+         inkscapeConnector-curvature="0"
          d="M 9.2604167,9.2604167 H 30.427083 L 19.84375,27.78125 Z"
          style="stroke-width:0.52916664"
          id="path7209" />
@@ -48,51 +48,51 @@
       <desc
          id="desc7251">Removal of one or more specific sets of times from a set. (ISO)</desc>
       <path
-         inkscape:connector-curvature="0"
+         inkscapeConnector-curvature="0"
          d="M 9.2604167,30.427083 19.84375,11.90625 30.427083,30.427083 Z"
          style="stroke-width:0.52916664"
          id="path7253" />
     </symbol>
   </defs>
-  <sodipodi:namedview
+  <sodipodiNamedview
      id="base"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.7071068"
-     inkscape:cx="100.50916"
-     inkscape:cy="225.74312"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscapePageopacity="0.0"
+     inkscapePageshadow="2"
+     inkscapeZoom="0.7071068"
+     inkscapeCx="100.50916"
+     inkscapeCy="225.74312"
+     inkscapeDocument-units="mm"
+     inkscapeCurrent-layer="layer1"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1413"
-     inkscape:window-height="751"
-     inkscape:window-x="87"
-     inkscape:window-y="136"
-     inkscape:window-maximized="0"
-     inkscape:snap-grids="false"
-     inkscape:snap-to-guides="false" />
+     inkscapeWindow-width="1413"
+     inkscapeWindow-height="751"
+     inkscapeWindow-x="87"
+     inkscapeWindow-y="136"
+     inkscapeWindow-maximized="0"
+     inkscapeSnap-grids="false"
+     inkscapeSnap-to-guides="false" />
   <metadata
      id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
+    <rdfRDF>
+      <ccWork
+         rdfAbout="">
+        <dcFormat>image/svg+xml</dcFormat>
+        <dcType
+           rdfResource="http://purl.org/dc/dcmitype/StillImage" />
+        <dcTitle></dcTitle>
+      </ccWork>
+    </rdfRDF>
   </metadata>
   <g
-     inkscape:label="Calque 1"
-     inkscape:groupmode="layer"
+     inkscapeLabel="Calque 1"
+     inkscapeGroupmode="layer"
      id="layer1"
      transform="translate(-43.845234,-67.946426)">
     <rect
@@ -141,9 +141,9 @@
        id="g9925"
        transform="translate(-1.2637841,-13.259294)">
       <path
-         inkscape:original-d="m 56.754352,100.22033 c -0.685727,0.0621 -1.371719,0.12446 -2.057976,0.18709 -0.997958,2.68246 -1.995347,5.36294 -2.993418,8.04481 2.64e-4,2.93114 2.64e-4,5.86185 0,8.79317 0.998161,3.49237 2.120603,6.98438 3.180507,10.47696 0.998119,-2.6e-4 1.995877,-2.6e-4 2.993419,0"
-         inkscape:path-effect="#path-effect4779"
-         inkscape:connector-curvature="0"
+         inkscapeOriginal-d="m 56.754352,100.22033 c -0.685727,0.0621 -1.371719,0.12446 -2.057976,0.18709 -0.997958,2.68246 -1.995347,5.36294 -2.993418,8.04481 2.64e-4,2.93114 2.64e-4,5.86185 0,8.79317 0.998161,3.49237 2.120603,6.98438 3.180507,10.47696 0.998119,-2.6e-4 1.995877,-2.6e-4 2.993419,0"
+         inkscapePath-effect="#path-effect4779"
+         inkscapeConnector-curvature="0"
          id="path4777"
          d="m 56.754352,100.22033 c -0.685705,0.0623 -1.371697,0.1247 -2.213889,1.4971 -0.842191,1.3724 -1.83958,4.05288 -2.338542,6.85941 -0.498963,2.80653 -0.498963,5.73724 0.02851,8.94047 0.527476,3.20322 1.592813,6.71257 2.621982,8.45881 1.029169,1.74624 2.026927,1.74624 3.024469,1.74624"
          style="fill:none;stroke:#000000;stroke-width:0.96499997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
@@ -152,7 +152,7 @@
          width="100%"
          y="0"
          x="0"
-         xlink:href="#Extract"
+         xlinkHref="#Extract"
          style="fill:#000000;stroke:#000000"
          transform="matrix(0.23258219,0.15459471,-0.16787728,0.25256534,54.301748,92.695586)"
          id="use9904" />
@@ -160,7 +160,7 @@
          id="use9920"
          transform="matrix(-0.18698515,0.20743808,-0.22526088,-0.20305066,65.13399,127.80172)"
          style="fill:#000000;stroke:#000000"
-         xlink:href="#Extract"
+         xlinkHref="#Extract"
          x="0"
          y="0"
          width="100%"

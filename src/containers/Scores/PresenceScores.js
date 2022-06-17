@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Bar } from 'react-chartjs-2';
-import { withRouter } from "react-router-dom";
+import { withRouter } from "../../withRouter";
 import { connect } from "react-redux";
 import { injectIntl, FormattedMessage } from "react-intl";
 import { SCORES, QUESTION, CORRECT_WRONG, CORRECT_ANSWER, USERS, TIME, YOUR_RESULTS } from "../translation";
@@ -122,19 +122,19 @@ class PresenceScores extends Component {
 	};
 
 	componentWillReceiveProps() {
-		if (this.props.location) {
+		if (this.props.router.location) {
 			this.setChart();
 		}
 	}
 
 	componentDidMount() {
-		if (this.props.location) {
+		if (this.props.router.location) {
 			this.setChart();
 		}
 	}
 
 	setChart = () => {
-		const { exercise } = this.props.location.state;
+		const { exercise } = this.props.router.location.state;
 		const { score } = this.state;
 
 		const { shared_results } = exercise;
@@ -280,7 +280,7 @@ class PresenceScores extends Component {
 		}
 		else if (this.state.mode === this.modes.DETAILS) {
 			detail_active = "active";
-			const { exercise } = this.props.location.state;
+			const { exercise } = this.props.router.location.state;
 			const { shared_results } = exercise;
 			let users = [];
 			let allUserAnswers = [];

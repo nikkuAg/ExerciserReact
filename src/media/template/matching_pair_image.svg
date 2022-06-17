@@ -2,23 +2,23 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlnsDc="http://purl.org/dc/elements/1.1/"
+   xmlnsCc="http://creativecommons.org/ns#"
+   xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlnsSvg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlnsInkscape="http://www.inkscape.org/namespaces/inkscape"
    width="100mm"
    height="100mm"
    viewBox="0 0 100 100"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="matching_pair_image.svg">
+   inkscapeVersion="0.92.3 (2405546, 2018-03-11)"
+   sodipodiDocname="matching_pair_image.svg">
   <defs
      id="defs2">
-    <inkscape:path-effect
+    <inkscapePath-effect
        effect="bspline"
        id="path-effect4779"
        is_visible="true"
@@ -35,7 +35,7 @@
       <desc
          id="desc7207">Combine two or more sets of items into one set. (ISO)</desc>
       <path
-         inkscape:connector-curvature="0"
+         inkscapeConnector-curvature="0"
          d="M 9.2604167,9.2604167 H 30.427083 L 19.84375,27.78125 Z"
          style="stroke-width:0.52916664"
          id="path7209" />
@@ -47,51 +47,51 @@
       <desc
          id="desc7251">Removal of one or more specific sets of times from a set. (ISO)</desc>
       <path
-         inkscape:connector-curvature="0"
+         inkscapeConnector-curvature="0"
          d="M 9.2604167,30.427083 19.84375,11.90625 30.427083,30.427083 Z"
          style="stroke-width:0.52916664"
          id="path7253" />
     </symbol>
   </defs>
-  <sodipodi:namedview
+  <sodipodiNamedview
      id="base"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="1.508125"
-     inkscape:cx="185.85505"
-     inkscape:cy="188.97638"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscapePageopacity="0.0"
+     inkscapePageshadow="2"
+     inkscapeZoom="1.508125"
+     inkscapeCx="185.85505"
+     inkscapeCy="188.97638"
+     inkscapeDocument-units="mm"
+     inkscapeCurrent-layer="layer1"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1413"
-     inkscape:window-height="751"
-     inkscape:window-x="232"
-     inkscape:window-y="68"
-     inkscape:window-maximized="0"
-     inkscape:snap-grids="false"
-     inkscape:snap-to-guides="false" />
+     inkscapeWindow-width="1413"
+     inkscapeWindow-height="751"
+     inkscapeWindow-x="232"
+     inkscapeWindow-y="68"
+     inkscapeWindow-maximized="0"
+     inkscapeSnap-grids="false"
+     inkscapeSnap-to-guides="false" />
   <metadata
      id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
+    <rdfRDF>
+      <ccWork
+         rdfAbout="">
+        <dcFormat>image/svg+xml</dcFormat>
+        <dcType
+           rdfResource="http://purl.org/dc/dcmitype/StillImage" />
+        <dcTitle></dcTitle>
+      </ccWork>
+    </rdfRDF>
   </metadata>
   <g
-     inkscape:label="Calque 1"
-     inkscape:groupmode="layer"
+     inkscapeLabel="Calque 1"
+     inkscapeGroupmode="layer"
      id="layer1"
      transform="translate(-43.845234,-67.946426)">
     <rect
@@ -174,7 +174,7 @@
        y="107.28168"
        ry="0.66362882" />
     <flowRoot
-       xml:space="preserve"
+       xmlSpace="preserve"
        id="flowRoot852"
        style="fill:black;fill-opacity:1;stroke:none;font-family:Webdings;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Webdings;font-stretch:normal;font-variant:normal;"><flowRegion
          id="flowRegion854"
@@ -186,34 +186,34 @@
            y="213.19688"
            style="-inkscape-font-specification:Webdings;font-family:Webdings;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" /></flowRegion><flowPara
          id="flowPara858"></flowPara></flowRoot>    <text
-       xml:space="preserve"
+       xmlSpace="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:Webdings;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;-inkscape-font-specification:Webdings;font-stretch:normal;font-variant:normal;"
        x="100.5331"
        y="129.96742"
        id="text862"><tspan
-         sodipodi:role="line"
+         sodipodiRole="line"
          id="tspan860"
          x="100.5331"
          y="139.33119"
          style="stroke-width:0.26458332;-inkscape-font-specification:Webdings;font-family:Webdings;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" /></text>
     <text
-       xml:space="preserve"
+       xmlSpace="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:Webdings;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;-inkscape-font-specification:Webdings;font-stretch:normal;font-variant:normal;"
        x="102.02981"
        y="123.7935"
        id="text870"><tspan
-         sodipodi:role="line"
+         sodipodiRole="line"
          id="tspan868"
          x="102.02981"
          y="133.15727"
          style="stroke-width:0.26458332;-inkscape-font-specification:Webdings;font-family:Webdings;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" /></text>
     <text
-       xml:space="preserve"
+       xmlSpace="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Webdings;-inkscape-font-specification:Webdings;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="60.870296"
        y="120.5488"
        id="text874"><tspan
-         sodipodi:role="line"
+         sodipodiRole="line"
          id="tspan872"
          x="60.870296"
          y="120.5488"
@@ -256,7 +256,7 @@
        style="stroke:#000000">
       <path
          style="fill:none;stroke:#000000;stroke-width:5"
-         inkscape:connector-curvature="0"
+         inkscapeConnector-curvature="0"
          id="path4"
          d="m 50.429502,42.668553 c -9.312,0.01 -16.845,7.544 -16.858,16.859 0.014,9.308 7.546,16.836 16.858,16.854 9.306,-0.019 16.839,-7.547 16.859,-16.854 -0.02,-9.315 -7.553,-16.849 -16.859,-16.859 z m 45.042,-13.975 h -17.204 l -1.332,-15.327 c 0,-1.447 -1.178,-2.629 -2.635,-2.629 h -47.742 c -1.457,0 -2.631,1.182 -2.631,2.629 l -1.333,15.326 h -2.964 v -3.429 c 0,-1.2 -0.974,-2.17 -2.174,-2.17 H 7.7265021 c -1.2,0 -2.174,0.971 -2.174,2.17 v 3.429 h -0.165 c -2.735,0.001 -4.95799997,2.215 -4.95799997,4.951 v 53.227 c 0,2.741 2.22199997,4.958 4.95799997,4.958 H 95.471502 c 2.738,0 4.957998,-2.217 4.957998,-4.958 v -53.227 c 0,-2.736 -2.219998,-4.95 -4.957998,-4.95 z m -82.857,20.836 c -3.3999999,0 -6.1569999,-2.758 -6.1569999,-6.162 0,-3.401 2.756,-6.158 6.1569999,-6.158 3.405,0 6.157,2.757 6.157,6.158 0,3.404 -2.752,6.162 -6.157,6.162 z m 24.965,-31.999 h 25.697 c 1.584,0 2.864,1.287 2.864,2.862 0,1.583 -1.282,2.866 -2.864,2.866 h -25.697 c -1.575,0 -2.859,-1.284 -2.859,-2.866 0,-1.574 1.284,-2.862 2.859,-2.862 z m 12.85,66.486 c -13.532,0 -24.49,-10.961 -24.497,-24.489 0.006,-13.536 10.965,-24.498 24.497,-24.498 13.528,0 24.489,10.962 24.493,24.497 -0.004,13.529 -10.965,24.49 -24.493,24.49 z" />
       <ellipse
@@ -313,11 +313,11 @@
        style="fill:#cccccc;stroke:#b3b3b3;stroke-width:1.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 78.830815,90.678805 28.437475,26.192415 v 0"
        id="path991"
-       inkscape:connector-curvature="0" />
+       inkscapeConnector-curvature="0" />
     <path
        style="fill:none;stroke:#b3b3b3;stroke-width:1.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="M 79.459269,143.56046 H 107.354"
        id="path993"
-       inkscape:connector-curvature="0" />
+       inkscapeConnector-curvature="0" />
   </g>
 </svg>

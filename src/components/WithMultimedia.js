@@ -36,8 +36,8 @@ const withMultimedia = (defaultThumbnail) => (Component) => {
 		}
 
 		componentDidMount() {
-			if (this.props.location.state) {
-				const { thumbnail, userLanguage } = this.props.location.state.exercise;
+			if (this.props.router.location.state) {
+				const { thumbnail, userLanguage } = this.props.router.location.state.exercise;
 				let newThumbnail = thumbnail;
 
 				// For default exercises
