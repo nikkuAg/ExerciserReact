@@ -50,7 +50,6 @@ class MCQPlayer extends Component {
 
   // load the exercise from props
   componentDidMount() {
-    console.log(this.props.router.location);
     if (this.props.router.location.state) {
       const { id, title, questions, scores, times, userLanguage } =
         this.props.router.location.state.exercise;

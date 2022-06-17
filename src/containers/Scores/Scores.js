@@ -116,7 +116,6 @@ class Scores extends Component {
   }
 
   componentDidMount() {
-	  console.log(this.props.router.location)
     if (this.props.router.location) {
       const { userScore, userTime, noOfQuestions, exercise, userAnswers } =
         this.props.router.location.state;

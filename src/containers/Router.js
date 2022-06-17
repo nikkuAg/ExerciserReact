@@ -35,7 +35,6 @@ const Main = (props) => {
 		zoom = `${((boardSize/containerSize.height) + paddingPercent/100) * 100}%`;
 	}
 	const { onUpdate, onSharedResult, inEditMode, inFullscreenMode } = props;
-	console.log(props)
 	return (
 		<div className="main-container" ref={ref} style={{zoom: zoom, padding: (props.inFullscreenMode && "0px")}}>
 			<Routes>
