@@ -36,7 +36,7 @@ const Main = (props) => {
 	}
 	const { onUpdate, onSharedResult, inEditMode, inFullscreenMode } = props;
 	return (
-		<div className="main-container" ref={ref} style={{zoom: zoom, padding: (props.inFullscreenMode && "0px")}}>
+		<div className="main-container py-2" ref={ref} style={{zoom: zoom, padding: (props.inFullscreenMode && "0px")}}>
 			<Routes>
 				<Route exact path="/" element={ <ExerciseList onUpdate={onUpdate} inEditMode={inEditMode} inFullscreenMode={inFullscreenMode} {...props} />} />
 				<Route exact path="/new" element={<NewExerciseTemplate inFullscreenMode={inFullscreenMode} {...props} />} />

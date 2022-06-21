@@ -4,12 +4,13 @@
 }
 
 .button-redo{
-    width: 60px;
+    width: 60px !important;
     height: 60px;
     background-image: url("../icons/exercise/redo.svg");
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 30px;
+    margin-bottom: 2rem;
 }
 
 .button-redo:hover{

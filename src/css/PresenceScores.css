@@ -1,5 +1,5 @@
 .score-button{
-    width: 40px;
+    width: 40px !important;
     height: 40px;
     background-image: url("../icons/exercise/percent.svg");
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@
 }
 
 .time-button{
-    width: 40px;
+    width: 40px !important;
     height: 40px;
     background-image: url("../icons/exercise/clock.svg");
     background-repeat: no-repeat;
@@ -27,7 +27,7 @@
 }
 
 .detail-button{
-    width: 40px;
+    width: 40px !important;
     height: 40px;
     background-image: url("../icons/exercise/details.png");
     background-repeat: no-repeat;
