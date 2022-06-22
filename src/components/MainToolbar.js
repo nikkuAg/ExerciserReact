@@ -76,7 +76,7 @@ const MainToolbar = (props) => {
                 onClick={props.startTutorial} />
             {props.showTutorial &&
                 <Tutorial unmount={props.stopTutorial}
-                    pathname={props.history.location.pathname}
+                    pathname={props.router.location.pathname}
             />}
         </div>
     );
