@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter } from "react-router-dom";
+import { withRouter } from "../../withRouter"
 import { connect } from "react-redux";
 import { addScoreTime } from '../../store/actions/exercises';
 import { SUBMIT_QUESTION, FINISH_EXERCISE } from "../translation";
@@ -41,11 +41,11 @@ class REORDERPlayer extends Component {
 
 	// load the exercise from props
 	componentDidMount() {
-		if (this.props.location.state) {
-			const { id, title, question, scores, times, list, userLanguage } = this.props.location.state.exercise;
+		if (this.props.router.location.state) {
+			const { id, title, question, scores, times, list, userLanguage } = this.props.router.location.state.exercise;
 
 			let goBackToEdit = false;
-			if (this.props.location.state.edit) goBackToEdit = true;
+			if (this.props.router.location.state.edit) goBackToEdit = true;
 
 			let updatedQuestion = setDefaultMedia(question);
 			let updatedList = list.map((li) => {
@@ -137,16 +137,16 @@ class REORDERPlayer extends Component {
 	// redirect to scores screen/ edit screen
 	finishExercise = () => {
 		const { scores, score, id, currentTime, times, list, goBackToEdit, userAnswers } = this.state;
-		let exercise = this.props.location.state.exercise;
+		let exercise = this.props.router.location.state.exercise;
 		let noOfQuestions = list.length;
 
 		if (goBackToEdit)
-			this.props.history.push('/edit/reorder', { exercise: exercise });
+			this.props.router.navigate('/edit/reorder', {state: { exercise: exercise}});
 		else {
 			scores.push(score);
 			times.push(currentTime);
 			this.props.addScoreTime(id, score, currentTime);
-			this.props.history.push('/scores', {
+			this.props.router.navigate('/scores', {state: {
 				scores: scores,
 				userScore: score,
 				times: times,
@@ -155,7 +155,7 @@ class REORDERPlayer extends Component {
 				exercise: exercise,
 				userAnswers: userAnswers,
 				type: "REORDER"
-			});
+			}});
 		}
 	};
 

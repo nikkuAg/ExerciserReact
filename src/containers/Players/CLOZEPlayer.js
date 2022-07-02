@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter } from "../../withRouter"
 import { connect } from "react-redux";
 import { addScoreTime } from '../../store/actions/exercises';
 import "../../css/CLOZEPlayer.css"
@@ -45,13 +45,13 @@ class CLOZEPlayer extends Component {
 
 	// load the exercise from props
 	componentDidMount() {
-		if (this.props.location.state) {
-			const { id, title, question, scores, times, answers, clozeText, writeIn, userLanguage } = this.props.location.state.exercise;
+		if (this.props.router.location.state) {
+			const { id, title, question, scores, times, answers, clozeText, writeIn, userLanguage } = this.props.router.location.state.exercise;
 
 			let updatedQuetion = setDefaultMedia(question);
 
 			let goBackToEdit = false;
-			if (this.props.location.state.edit) goBackToEdit = true;
+			if (this.props.router.location.state.edit) goBackToEdit = true;
 
 			let userans = answers.map(() => "");
 
@@ -159,7 +159,7 @@ class CLOZEPlayer extends Component {
 			}
 		}
 
-		let clozeText = this.props.location.state.exercise.clozeText.split('\n');
+		let clozeText = this.props.router.location.state.exercise.clozeText.split('\n');
 		clozeText = clozeText.map(text => {
 			return text.replace(/(-[0-9]*-)/, '______')
 		})
@@ -184,16 +184,16 @@ class CLOZEPlayer extends Component {
 	// redirect to scores screen/ edit screen
 	finishExercise = () => {
 		const { scores, score, id, currentTime, times, answers, goBackToEdit, userAnswers } = this.state;
-		let exercise = this.props.location.state.exercise;
+		let exercise = this.props.router.location.state.exercise;
 		let noOfQuestions = answers.length;
 
 		if (goBackToEdit)
-			this.props.history.push('/edit/cloze', { exercise: exercise });
+			this.props.router.navigate('/edit/cloze', {state: { exercise: exercise}});
 		else {
 			scores.push(score);
 			times.push(currentTime);
 			this.props.addScoreTime(id, score, currentTime);
-			this.props.history.push('/scores', {
+			this.props.router.navigate('/scores', {state: {
 				scores: scores,
 				userScore: score,
 				times: times,
@@ -202,7 +202,7 @@ class CLOZEPlayer extends Component {
 				exercise: exercise,
 				userAnswers: userAnswers,
 				type: "CLOZE"
-			});
+			}});
 		}
 	};
 

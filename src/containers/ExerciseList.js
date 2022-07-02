@@ -4,7 +4,7 @@ import { removeExercises, editExercise } from '../store/actions/exercises';
 import { addSharedExercise, removeSharedExercise } from "../store/actions/presence";
 import '../css/ExerciseList.css';
 import UserList from "../components/UserList"
-import { withRouter } from "react-router-dom";
+import { withRouter } from "../withRouter";
 import { connect } from "react-redux";
 import UserIcon from "../components/UserIcon";
 
@@ -38,22 +38,22 @@ class ExerciseList extends Component {
 	onEdit = id => {
 		let exercise = this.props.exercises.find(x => x.id === id);
 		if (exercise.type === 'MCQ') {
-			this.props.history.push('/edit/mcq', { exercise: exercise })
+			this.props.router.navigate('/edit/mcq', {state: { exercise: exercise}})
 		}
 		if (exercise.type === 'CLOZE') {
-			this.props.history.push('/edit/cloze', { exercise: exercise })
+			this.props.router.navigate('/edit/cloze', {state: { exercise: exercise}})
 		}
 		if (exercise.type === 'REORDER') {
-			this.props.history.push('/edit/reorder', { exercise: exercise })
+			this.props.router.navigate('/edit/reorder', {state: { exercise: exercise}})
 		}
 		if (exercise.type === 'GROUP_ASSIGNMENT') {
-			this.props.history.push('/edit/group', { exercise: exercise })
+			this.props.router.navigate('/edit/group', {state: { exercise: exercise}})
 		}
 		if (exercise.type === 'FREE_TEXT_INPUT') {
-			this.props.history.push('/edit/freeText', { exercise: exercise })
+			this.props.router.navigate('/edit/freeText', {state: { exercise: exercise}})
 		}
 		if (exercise.type === 'MATCHING_PAIR') {
-			this.props.history.push('/edit/match', { exercise: exercise })
+			this.props.router.navigate('/edit/match', {state: { exercise: exercise}})
 		}
 	};
 
@@ -72,28 +72,28 @@ class ExerciseList extends Component {
 	onPlay = id => {
 		let exercise = this.props.exercises.find(x => x.id === id);
 		if (exercise.type === 'MCQ') {
-			this.props.history.push('/play/mcq', { exercise: exercise })
+			this.props.router.navigate('/play/mcq', {state: { exercise: exercise}})
 		}
 		if (exercise.type === 'CLOZE') {
-			this.props.history.push('/play/cloze', { exercise: exercise })
+			this.props.router.navigate('/play/cloze', {state: { exercise: exercise}})
 		}
 		if (exercise.type === 'REORDER') {
-			this.props.history.push('/play/reorder', { exercise: exercise })
+			this.props.router.navigate('/play/reorder', {state: { exercise: exercise}})
 		}
 		if (exercise.type === 'GROUP_ASSIGNMENT') {
-			this.props.history.push('/play/group', { exercise: exercise })
+			this.props.router.navigate('/play/group', {state: { exercise: exercise}})
 		}
 		if (exercise.type === 'FREE_TEXT_INPUT') {
-			this.props.history.push('/play/freeText', { exercise: exercise })
+			this.props.router.navigate('/play/freeText', {state: { exercise: exercise}})
 		}
 		if (exercise.type === 'MATCHING_PAIR') {
-			this.props.history.push('/play/match', { exercise: exercise })
+			this.props.router.navigate('/play/match', {state: { exercise: exercise}})
 		}
 	};
 
 	presenceResult = id => {
 		let exercise = this.props.shared_exercises.find(x => x.id === id);
-		this.props.history.push('/presence/scores', { exercise: exercise })
+		this.props.router.navigate('/presence/scores', {state: { exercise: exercise}})
 	};
 
 	render() {

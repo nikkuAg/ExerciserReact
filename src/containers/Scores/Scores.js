@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Bar } from 'react-chartjs-2';
-import { withRouter } from "react-router-dom";
+import { withRouter } from "../../withRouter";
 import { connect } from "react-redux";
 import { injectIntl, FormattedMessage } from 'react-intl';
 import {
@@ -108,8 +108,8 @@ class Scores extends Component {
 	}
 
 	componentDidMount() {
-		if (this.props.location) {
-			const { userScore, userTime, noOfQuestions, exercise, userAnswers } = this.props.location.state;
+		if (this.props.router.location) {
+			const { userScore, userTime, noOfQuestions, exercise, userAnswers } = this.props.router.location.state;
 			let score = Math.ceil(userScore / noOfQuestions * 100);
 			let time = Math.ceil(userTime / 60);
 			if (this.props.isShared) {
@@ -120,7 +120,7 @@ class Scores extends Component {
 	}
 
 	setChart = () => {
-		const { userScore, userTime, noOfQuestions } = this.props.location.state;
+		const { userScore, userTime, noOfQuestions } = this.props.router.location.state;
 		const { stroke, fill } = this.props.current_user.colorvalue ? this.props.current_user.colorvalue : { stroke: "#00FFFF", fill: "#800080" };
 
 		let score = Math.ceil(userScore / noOfQuestions * 100);
@@ -193,24 +193,24 @@ class Scores extends Component {
 	};
 
 	redo = () => {
-		const { type, exercise } = this.props.location.state;
+		const { type, exercise } = this.props.router.location.state;
 		if (type === 'MCQ') {
-			this.props.history.push('/play/mcq', { exercise: exercise })
+			this.props.router.navigate('/play/mcq', {state: { exercise: exercise}})
 		}
 		if (type === 'CLOZE') {
-			this.props.history.push('/play/cloze', { exercise: exercise })
+			this.props.router.navigate('/play/cloze', {state: { exercise: exercise}})
 		}
 		if (type === 'REORDER') {
-			this.props.history.push('/play/reorder', { exercise: exercise })
+			this.props.router.navigate('/play/reorder', {state: { exercise: exercise}})
 		}
 		if (type === 'GROUP_ASSIGNMENT') {
-			this.props.history.push('/play/group', { exercise: exercise })
+			this.props.router.navigate('/play/group', {state: { exercise: exercise}})
 		}
 		if (type === 'FREE_TEXT_INPUT') {
-			this.props.history.push('/play/freeText', { exercise: exercise })
+			this.props.router.navigate('/play/freeText', {state: { exercise: exercise}})
 		}
 		if (type === 'MATCHING_PAIR') {
-			this.props.history.push('/play/match', { exercise: exercise })
+			this.props.router.navigate('/play/match', {state: { exercise: exercise}})
 		}
 	};
 
@@ -263,7 +263,7 @@ class Scores extends Component {
 		}
 		else if (this.state.mode === this.modes.DETAILS) {
 			detail_active = "active"
-			const { userAnswers } = this.props.location.state;
+			const { userAnswers } = this.props.router.location.state;
 			let resultDetails = userAnswers.map((answer, index) => {
 				return (
 					<tr key={index}>

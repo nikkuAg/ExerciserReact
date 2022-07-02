@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter } from "../../withRouter"
 import { connect } from "react-redux";
 import { addScoreTime } from '../../store/actions/exercises';
 import "../../css/MCQPlayer.css"
@@ -47,8 +47,8 @@ class MCQPlayer extends Component {
 
 	// load the exercise from props
 	componentDidMount() {
-		if (this.props.location.state) {
-			const { id, title, questions, scores, times, userLanguage } = this.props.location.state.exercise;
+		if (this.props.router.location.state) {
+			const { id, title, questions, scores, times, userLanguage } = this.props.router.location.state.exercise;
 
 			let updatedQuestions = questions.map((ques) => {
 				let updatedOptions = ques.options.map((option) => {
@@ -66,7 +66,7 @@ class MCQPlayer extends Component {
 			if (questions.length === 1) finish = true;
 
 			let goBackToEdit = false;
-			if (this.props.location.state.edit) goBackToEdit = true;
+			if (this.props.router.location.state.edit) goBackToEdit = true;
 
 			let options = currentQuestion.options.slice();
 			this.shuffleArray(options);
@@ -180,15 +180,15 @@ class MCQPlayer extends Component {
 	// redirect to scores screen/ edit screen
 	finishExercise = () => {
 		const { scores, currentScore, id, currentTime, times, noOfQuestions, goBackToEdit, userAnswers } = this.state;
-		let exercise = this.props.location.state.exercise;
+		let exercise = this.props.router.location.state.exercise;
 
 		if (goBackToEdit)
-			this.props.history.push('/edit/mcq', { exercise: exercise });
+			this.props.router.navigate('/edit/mcq', {state: { exercise: exercise}});
 		else {
 			scores.push(currentScore);
 			times.push(currentTime);
 			this.props.addScoreTime(id, currentScore, currentTime);
-			this.props.history.push('/scores', {
+			this.props.router.navigate('/scores', {state: {
 				scores: scores,
 				userScore: currentScore,
 				times: times,
@@ -197,7 +197,7 @@ class MCQPlayer extends Component {
 				exercise: exercise,
 				userAnswers: userAnswers,
 				type: "MCQ",
-			});
+			}});
 		}
 	};
 

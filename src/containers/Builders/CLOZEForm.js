@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { incrementExerciseCounter } from "../../store/actions/increment_counter";
 import { addNewExercise, editExercise } from "../../store/actions/exercises";
 import { FormattedMessage } from 'react-intl';
-import { withRouter } from "react-router-dom"
+import { withRouter } from "../../withRouter"
 import "../../css/CLOZEForm.css";
 import datastore from 'lib/sugar-web/datastore';
 import chooser from 'lib/sugar-web/graphics/journalchooser';
@@ -67,8 +67,8 @@ class CLOZEForm extends Component {
 
 	// in case of edit load the exercise
 	componentDidMount() {
-		if (this.props.location.state) {
-			const { id, title, question, scores, times, clozeText, answers, writeIn } = this.props.location.state.exercise;
+		if (this.props.router.location.state) {
+			const { id, title, question, scores, times, clozeText, answers, writeIn } = this.props.router.location.state.exercise;
 			let nextBlank = answers.length + 1;
 
 			let updatedQuetion = setDefaultMedia(question);
@@ -248,9 +248,9 @@ class CLOZEForm extends Component {
 		}
 
 		if (bool)
-			this.props.history.push('/play/cloze', { exercise: exercise, edit: true });
+			this.props.router.navigate('/play/cloze', {state:{ exercise: exercise, edit: true }});
 		else
-			this.props.history.push('/')
+			this.props.router.navigate('/')
 	};
 
 	handleChangeCloze = e => {

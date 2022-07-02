@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { withRouter } from '../withRouter'
 import '../css/Navbar.css'
 import { injectIntl } from 'react-intl';
 import { UNFULLSCREEN } from "../containers/translation";
@@ -10,19 +10,19 @@ class Navbar extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isfullScreen:false,
+			isfullScreen: false,
 			showTutorial: false
 		}
 	}
 
 	// redirect to new exercise template
 	directToNew = () => {
-		this.props.history.push('/new');
+		this.props.router.navigate('/new');
 	};
 
 	// redirect to home screen
 	directToHome = () => {
-		this.props.history.push('/');
+		this.props.router.navigate('/');
 	};
 
 	enterEditMode = () => {
@@ -31,7 +31,7 @@ class Navbar extends Component {
 
 	exitEditMode = () => {
 		this.props.toggleEditMode(false);
-		this.props.history.push('/');
+		this.props.router.navigate('/');
 	}
 
 	startTutorial = () => {
@@ -47,17 +47,17 @@ class Navbar extends Component {
 	}
 	goFullscreen = () => {
 		this.setState({
-			isfullScreen:true
+			isfullScreen: true
 		})
 	}
 	gounFullScreen = () => {
 		this.setState({
-			isfullScreen:false
+			isfullScreen: false
 		})
 	}
 
 	render() {
-		let unFullScreen = this.props.intl.formatMessage({ id: UNFULLSCREEN});
+		let unFullScreen = this.props.intl.formatMessage({ id: UNFULLSCREEN });
 		let navFunctions = {
 			directToNew: this.directToNew,
 			directToHome: this.directToHome,
@@ -68,13 +68,13 @@ class Navbar extends Component {
 		};
 		return (
 			<React.Fragment>
-				<MainToolbar 
+				<MainToolbar
 					{...this.props}
 					{...navFunctions}
-					showTutorial = {this.state.showTutorial}
+					showTutorial={this.state.showTutorial}
 				/>
 				<button
-					className={"toolbutton" + (!this.props.inFullscreenMode? " toolbar-hide" : "")}
+					className={"toolbutton" + (!this.props.inFullscreenMode ? " toolbar-hide" : "")}
 					id="unfullscreen-button"
 					title={unFullScreen}
 					onClick={this.props.toggleFullscreen} />

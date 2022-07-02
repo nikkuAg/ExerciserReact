@@ -21,7 +21,7 @@ import {
 	ANSWER_ERROR,
 	MCQ,
 } from "../translation";
-import { withRouter } from "react-router-dom"
+import { withRouter } from "../../withRouter"
 import "../../css/MCQForm.css"
 import { MULTIMEDIA, setDefaultMedia } from '../../utils';
 
@@ -57,8 +57,8 @@ class MCQForm extends Component {
 
 	// in case of edit load the exercise
 	componentDidMount() {
-		if (this.props.location.state) {
-			const { id, title, questions, scores, times } = this.props.location.state.exercise;
+		if (this.props.router.location.state) {
+			const { id, title, questions, scores, times } = this.props.router.location.state.exercise;
 
 			let updatedQuestions = questions.map((ques) => {
 				let updatedOptions = ques.options.map((option) => {
@@ -356,9 +356,9 @@ class MCQForm extends Component {
 		}
 
 		if (bool)
-			this.props.history.push('/play/mcq', { exercise: exercise, edit: true });
+			this.props.router.navigate('/play/mcq',  {state:{ exercise: exercise, edit: true }});
 		else
-			this.props.history.push('/')
+			this.props.router.navigate('/')
 	};
 
 	// move to previous question

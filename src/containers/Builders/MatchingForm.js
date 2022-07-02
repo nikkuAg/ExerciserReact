@@ -16,7 +16,7 @@ import {
 	MATCH_ITEM,
 	MATCHING_ITEM
 } from "../translation";
-import { withRouter } from "react-router-dom";
+import { withRouter } from "../../withRouter"
 import "../../css/MatchingForm.css";
 import withMultimedia from '../../components/WithMultimedia';
 import { QuestionOptionsJSX } from '../../components/MultimediaJSX';
@@ -62,8 +62,8 @@ class MATCHING_PAIRForm extends Component {
 
 	// in case of edit load the exercise
 	componentDidMount() {
-		if (this.props.location.state) {
-			const { id, title, pairs, scores, times } = this.props.location.state.exercise;
+		if (this.props.router.location.state) {
+			const { id, title, pairs, scores, times } = this.props.router.location.state.exercise;
 
 			let updatedPairs = pairs.map((pair) => {
 				return {
@@ -301,9 +301,9 @@ class MATCHING_PAIRForm extends Component {
 		}
 
 		if (bool)
-			this.props.history.push('/play/match', { exercise: exercise, edit: true });
+			this.props.router.navigate('/play/match',  {state:{ exercise: exercise, edit: true }});
 		else
-			this.props.history.push('/')
+			this.props.router.navigate('/')
 	};
 
 	// move to previous question

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter } from "../../withRouter"
 import { connect } from "react-redux";
 import { addScoreTime } from '../../store/actions/exercises';
 import "../../css/MatchingPlayer.css";
@@ -40,8 +40,8 @@ class MATCHING_PAIRPLAYER extends Component {
 
 	// load the exercise from props
 	componentDidMount() {
-		if (this.props.location.state) {
-			const { id, title, pairs, scores, times, userLanguage } = this.props.location.state.exercise;
+		if (this.props.router.location.state) {
+			const { id, title, pairs, scores, times, userLanguage } = this.props.router.location.state.exercise;
 
 			let updatedPairs = pairs.map((pair) => {
 				return {
@@ -52,7 +52,7 @@ class MATCHING_PAIRPLAYER extends Component {
 			})
 
 			let goBackToEdit = false;
-			if (this.props.location.state.edit) goBackToEdit = true;
+			if (this.props.router.location.state.edit) goBackToEdit = true;
 
 			let answers = updatedPairs.map((pair) => {
 				return pair.answer;
@@ -231,7 +231,7 @@ class MATCHING_PAIRPLAYER extends Component {
 	// redirect to scores screen/ edit screen
 	finishExercise = () => {
 		const { pairs, scores, score, id, currentTime, times, noOfPairs, goBackToEdit, userAnswers } = this.state;
-		let exercise = this.props.location.state.exercise;
+		let exercise = this.props.router.location.state.exercise;
 
 		let updatedUserAnswers = [];
 		userAnswers.forEach((ans, index) => {
@@ -243,12 +243,12 @@ class MATCHING_PAIRPLAYER extends Component {
 		});
 
 		if (goBackToEdit)
-			this.props.history.push('/edit/match', { exercise: exercise });
+			this.props.router.navigate('/edit/match', {state: { exercise: exercise}});
 		else {
 			scores.push(score);
 			times.push(currentTime);
 			this.props.addScoreTime(id, score, currentTime);
-			this.props.history.push('/scores', {
+			this.props.router.navigate('/scores', {state: {
 				scores: scores,
 				userScore: score,
 				times: times,
@@ -257,7 +257,7 @@ class MATCHING_PAIRPLAYER extends Component {
 				exercise: exercise,
 				userAnswers: updatedUserAnswers,
 				type: "MATCHING_PAIR"
-			});
+			}});
 		}
 	};
 
